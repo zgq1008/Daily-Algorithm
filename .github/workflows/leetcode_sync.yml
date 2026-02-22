@@ -1,9 +1,9 @@
-name: Sync LeetCode
+name: Sync LeetCode CN
 
 on:
-  workflow_dispatch:  # 允许你在 Actions 页面手动点击按钮触发同步
+  workflow_dispatch:      # 允许手动触发
   schedule:
-    - cron: "0 8 * * *"  # 每天北京时间下午4点自动同步 (UTC时间08:00)
+    - cron: "0 8 * * *"   # 每天北京时间 16:00 自动同步
 
 jobs:
   build:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Sync
-        uses: joshcai/leetcode-sync@v1.7
+        # 核心修改：使用支持国区的 zanjs 分支版本
+        uses: zanjs/leetcode-sync@HEAD  
         with:
           github-token: ${{ github.token }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
-          leetcode-base-url: 'https://leetcode.cn'
-          destination-folder: . # 同步到仓库根目录
-          verbose: true # 在日志中显示详细信息
-          commit-header: '[LeetCode Sync]' # 提交信息的统一前缀
+          host: cn  # 关键参数：指定同步国区 leetcode.cn
+          destination-folder: .
+          verbose: true
