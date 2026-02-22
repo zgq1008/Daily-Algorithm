@@ -16,6 +16,7 @@ jobs:
           github-token: ${{ github.token }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+          leetcode-base-url: 'https://leetcode.cn'
           destination-folder: . # 同步到仓库根目录
           verbose: true # 在日志中显示详细信息
           commit-header: '[LeetCode Sync]' # 提交信息的统一前缀
