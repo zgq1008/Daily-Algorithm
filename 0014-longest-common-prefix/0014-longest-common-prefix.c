@@ -1,4 +1,5 @@
 char* longestCommonPrefix(char** strs, int strsSize) {
+    //纵向扫描法
     //二维数组
     if (strsSize==0)
         return "";
