@@ -1,31 +1,41 @@
-// 判断 s[left...right] 这一段是否为回文
-bool isPs(char* s, int left, int right) {
-    while (left < right) {
-        if (s[left] != s[right]) {
-            return false;
+//中心扩散法
+//回文串分为奇数中心点和偶数中心点
+//判断是否为回文串
+int isPS(char* s,int left,int right)
+{
+    int len=strlen(s);
+    while (left>=0&&right<len)
+    {
+        if (s[left]!=s[right])
+        {
+            break;
         }
-        left++;
-        right--;
+        left--;
+        right++;
     }
-    return true;
+    //当循环结束时 left和right所在位置已经是不匹配了
+    //应该返回right-1-(left+1)+1(主函数传递的i)
+    return right-left-1;
 }
-
 char* longestPalindrome(char* s) {
-    int len = strlen(s);
-    if (len == 0)
-        return "";  
-    int maxLen = 0;
-    int startIdx = 0; // 记录最长回文子串的起始位置 
-    for (int l = 0; l < len; l++) {
-        for (int r = l; r < len; r++) {
-            if (isPs(s, l, r) && (r - l + 1 > maxLen)) {
-                maxLen = r - l + 1;
-                startIdx = l;
-            }
+    int len=strlen(s);
+    int start=0,end=0;
+    for (int i=0;i<len;i++)
+    {
+        //奇数中心点
+        int len1=isPS(s,i,i);
+        //偶数中心点
+        int len2=isPS(s,i,i+1);
+        int maxlen=len1>len2?len1:len2;
+        if(maxlen>end-start+1)//如果本次长度大于上次循环的最大长度
+        {
+            start=i-((maxlen-1)/2);//最大长度算上了自己 所以要减1(isPS函数最后一句)
+            end=i+maxlen/2;//
         }
     }
-    char* result = (char*)malloc(sizeof(char) * (maxLen + 1));
-    strncpy(result, s + startIdx, maxLen);
-    result[maxLen] = '\0'; 
-    return result;
+    int len3=end-start+1;
+    char* arr=malloc(sizeof(char)*(len3+1));
+    strncpy(arr,s+start,len3);
+    arr[len3]='\0';
+    return arr;
 }
