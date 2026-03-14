@@ -12,6 +12,7 @@ char* convert(char* s, int numRows) {
             res[index++] = s[i + j];
             // 处于斜排的元素（非头和尾）
             if (i != 0 && i < numRows - 1 && j + cyclelen - i < len) {
+                //保证在同一行
                 res[index++] = s[j + cyclelen - i];
             }
         }
