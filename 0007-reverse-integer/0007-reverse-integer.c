@@ -5,6 +5,7 @@ int reverse(int x) {
     int res = 0;
     while (x != 0) {
         temp = x % 10;
+        //将判断语句写在赋值语句之前 防止res超出int范围
         if (res > maxnum / 10 || (res == maxnum / 10 && temp > 7))
             return 0;
         if (res < minnum / 10 || (res == minnum / 10 && temp > 8))
