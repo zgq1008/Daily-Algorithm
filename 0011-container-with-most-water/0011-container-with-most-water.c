@@ -7,14 +7,13 @@ int maxArea(int* height, int heightSize) {
         int minheight=height[r]>height[l]?height[l]:height[r];
         int area=minheight*(r-l);
         res=res>area?res:area;
-        if (height[l]>=height[r])
-        //高度高的指针不动 另一个指针移动
-        {
-            r--;
-        }
-        else
+        while(l<r&&height[l]<=minheight)
         {
             l++;
+        }
+        while(l<r&&height[r]<=minheight)
+        {
+            r--;
         }
     }
     return res;
