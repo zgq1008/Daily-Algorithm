@@ -34,6 +34,7 @@ Record daily algorithm practice
 | [0013-roman-to-integer](https://github.com/zgq1008/Daily-Algorithm/tree/master/0013-roman-to-integer) |
 | [0014-longest-common-prefix](https://github.com/zgq1008/Daily-Algorithm/tree/master/0014-longest-common-prefix) |
 | [0020-valid-parentheses](https://github.com/zgq1008/Daily-Algorithm/tree/master/0020-valid-parentheses) |
+| [0657-robot-return-to-origin](https://github.com/zgq1008/Daily-Algorithm/tree/master/0657-robot-return-to-origin) |
 ## Trie
 |  |
 | ------- |
@@ -76,4 +77,8 @@ Record daily algorithm practice
 | ------- |
 | [0015-3sum](https://github.com/zgq1008/Daily-Algorithm/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/zgq1008/Daily-Algorithm/tree/master/0016-3sum-closest) |
+## Simulation
+|  |
+| ------- |
+| [0657-robot-return-to-origin](https://github.com/zgq1008/Daily-Algorithm/tree/master/0657-robot-return-to-origin) |
 <!---LeetCode Topics End-->
