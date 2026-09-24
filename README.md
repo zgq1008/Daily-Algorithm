@@ -11,6 +11,7 @@ Record daily algorithm practice
 | [0014-longest-common-prefix](https://github.com/zgq1008/Daily-Algorithm/tree/master/0014-longest-common-prefix) |
 | [0015-3sum](https://github.com/zgq1008/Daily-Algorithm/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/zgq1008/Daily-Algorithm/tree/master/0016-3sum-closest) |
+| [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/zgq1008/Daily-Algorithm/tree/master/3550-smallest-index-with-digit-sum-equal-to-index) |
 ## Hash Table
 |  |
 | ------- |
@@ -24,6 +25,7 @@ Record daily algorithm practice
 | [0007-reverse-integer](https://github.com/zgq1008/Daily-Algorithm/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/zgq1008/Daily-Algorithm/tree/master/0009-palindrome-number) |
 | [0013-roman-to-integer](https://github.com/zgq1008/Daily-Algorithm/tree/master/0013-roman-to-integer) |
+| [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/zgq1008/Daily-Algorithm/tree/master/3550-smallest-index-with-digit-sum-equal-to-index) |
 ## String
 |  |
 | ------- |
